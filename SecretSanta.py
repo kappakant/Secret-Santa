@@ -44,9 +44,9 @@ def SecretSanta(participants: list, guaranteedpairs=False):
 
 def collectinput():
     # Collects the inputs to run the Secret Santa function with
-    print("Hey Jess, you still haven't made the Secret Santa thing, so I made a script for you.\n")
+    print("\nSecret Santa\n")
     guaranteedpairs = False
-    guaranteedpair = input("Is there a guaranteed pair?\nE.g. You want to force Payton to gift John Y/N: ")
+    guaranteedpair = input("Is there a guaranteed pair?\n(E.g. You want to force Payton to gift John in the Secret Santa List) Y/N: ")
     if guaranteedpair[0] == "Y" or guaranteedpair[0] == 'y':
         # Creates the optional parameter of guaranteedpairs for SecretSanta()
         amountofguaranteedpairs = int(input("How many guaranteed pairs? "))
