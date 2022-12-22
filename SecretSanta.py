@@ -9,9 +9,6 @@ def SecretSanta(participants: list, guaranteedpairs=False):
     if guaranteedpairs:
         # If there is a guaranteed pair, add those to the list first
         secretsantalist.update(guaranteedpairs)
-    if len(participants) % 2 != 0:
-        return "Uneven amount of participants."
-        # Not built for odd amount of participants right now
     # Initialize the gifter, giftee dictionary
     needsgift = participants[:]
     # slice of participants to not iterate over a list you're modifying
@@ -56,9 +53,6 @@ def collectinput():
             giftee = input(f"Giftee {name+1}: ")
             guaranteedpairs[gifter] = giftee
     amountofnames = int(input("Amount of People in this Secret Santa (excluding guaranteed pairs): "))
-    if amountofnames % 2 != 0:
-        print("Buddy boy, I don't know how to code something for an odd amount of people, please try again.\n\n")
-        return collectinput()
     participantlist = []
     for name in range(amountofnames):
         participant = input(f"Name {name+1}: ")
